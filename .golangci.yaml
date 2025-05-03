@@ -111,6 +111,9 @@ linters:
     - zerologlint
 
   settings:
+    exhaustruct:
+      include:
+        - 'infrastructure\\rest\\MuxServer.go'
     funlen:
       lines: 20
       statements: 20
