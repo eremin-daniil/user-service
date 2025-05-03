@@ -112,11 +112,11 @@ linters:
 
   settings:
     funlen:
-      lines: 30
+      lines: 20
       statements: 20
       ignore-comments: false
     gocognit:
-      min-complexity: 12
+      min-complexity: 10
     gocyclo:
       min-complexity: 10
     maintidx:
