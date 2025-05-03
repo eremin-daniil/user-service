@@ -9,8 +9,8 @@ import (
 
 type UserRepositoryInterface interface {
 	Create(ctx context.Context, user *userEntity.User) (repository.ObjectID, error)
-	GetByID(ctx context.Context, id userEntity.ID) (*userEntity.User, error)
+	GetByID(ctx context.Context, userID userEntity.ID) (*userEntity.User, error)
 	GetByLogin(ctx context.Context, login primitive.Login) (*userEntity.User, error)
 	Update(ctx context.Context, user *userEntity.User) error
-	DeleteByID(ctx context.Context, id userEntity.ID) error
+	DeleteByID(ctx context.Context, userID userEntity.ID) error
 }
