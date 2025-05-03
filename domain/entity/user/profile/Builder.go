@@ -35,6 +35,9 @@ func NewBuilder() *Builder {
 }
 
 func (b *Builder) IDString(value string) *Builder {
+	if value == "" {
+		return b
+	}
 	id, err := uuid.Parse(value)
 	if err != nil {
 		b.errs = append(b.errs, ErrInvalidProfileID)
